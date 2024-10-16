@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="HttpServer.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="HttpServer.exe" version="1.0.0.6" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Launcher" version="8.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -116,22 +116,22 @@
       <dsig:DigestValue>oyNj9loopxsKi90uxBF1HpTUQn4F0T/FHNdpM3+aZpo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="HttpServer.deps.json" size="26894">
+  <file name="HttpServer.deps.json" size="28447">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>QeSRYkCVjtq6DqRUcJPJ01QoC9marM6OYukEmOXbuC0=</dsig:DigestValue>
+      <dsig:DigestValue>P1DA2Hqrt2GSn8xVjehTFZCoCZLaZs0t6qDe54HqmPo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="HttpServer.dll" size="11776">
+  <file name="HttpServer.dll" size="14336">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>sjHmoLm6bVAOTLL3sCeUfUewGC1XVVXHtxJR41U8uMA=</dsig:DigestValue>
+      <dsig:DigestValue>wrUmkBkZzG+4Fj6Pqfj6FGrK/1P7n9VP+MhMv3Qjjwc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="HttpServer.exe" size="142336">
@@ -140,7 +140,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>fFEdGEBi0bTyq/e1sQEkNyHJArRTi/YNO4zR6ICXrw4=</dsig:DigestValue>
+      <dsig:DigestValue>ggM8zRIy3TAqr56UHQSmu390O0XXOtvptkgqKY8wEq0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="HttpServer.runtimeconfig.json" size="371">
@@ -150,6 +150,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>DiY1o4mftggowiwUIIqtmQzkSs4ENraiZE8C09pI1UU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="LitJSON.dll" size="68096">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>s0Ds5RS4clb7nZNPMiVuM63FZgUryz8wd6HkBZVTzGk=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Microsoft.CSharp.dll" size="1005840">
@@ -1716,6 +1725,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>fERgPjZm/a9/k7d3tzRYANUtu5jlaGSflEqwSEiMWoI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="UniTask.dll" size="1023488">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lJ7nQ9Q3tURi3JeXc7zSwIh8pnSrdAMZV8/W4HyCs2s=</dsig:DigestValue>
     </hash>
   </file>
   <file name="WindowsBase.dll" size="16648">

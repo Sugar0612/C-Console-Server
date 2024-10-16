@@ -4,13 +4,13 @@ using System.Text;
 
 namespace HttpServer.Core
 {
-    public class HttpServer
+    public class CHttpServer
     {
-        private HttpListener? listener;
-        private string? content;
-        private string m_Ip;
+        private HttpListener listener = new HttpListener();
+        private string content = "";
+        private string m_Ip = "";
 
-        public HttpServer(string url, string port)
+        public CHttpServer(string url, string port)
         {
             m_Ip = $"http://{url}:{port}/";
         }
@@ -29,10 +29,7 @@ namespace HttpServer.Core
             // 使用异步监听Web请求，当客户端的网络请求到来时会自动执行委托
             listener.BeginGetContext(Respones, null);
 
-            while (true)
-            {
-
-            }
+            while (true) ;
         }
 
         /// <summary>
@@ -44,45 +41,29 @@ namespace HttpServer.Core
         public void Respones(IAsyncResult ar)
         {
             // 再次开启异步监听
-            listener?.BeginGetContext(Respones, null);
+            listener.BeginGetContext(Respones, null);
 
             // 获取context对象
-            var context = listener?.EndGetContext(ar);
+            var context = listener.EndGetContext(ar);
 
             // 获取请求体
             var request = context.Request;
             var response = context.Response;
 
-            if (request.HttpMethod == "OPTIONS")
-            {
-                response.AddHeader("Access-Control-Allow-Credentials", "true");
-                response.AddHeader("Access-Control-Allow-Headers", "Content-Type, Accept, X-Request-Method, X-Access-Token, X-Application-Name, X-Request-Sent-Time, X-Requested-With");
-                response.AddHeader("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
-                //response.AddHeader("Access-Control-Max-Age", "1728000000");
-                response.AppendHeader("Access-Control-Allow-Origin", "*");
-                HttpSendAsync(context, "");
-            }
-
             string log = $"{DateTime.Now} new Request , Method is : {request.HttpMethod}";
             Console.WriteLine(log);
 
-            if (request.HttpMethod == "POST")
+            if (request.HttpMethod == "OPTIONS")
             {
-                response.AppendHeader("Access-Control-Allow-Origin", "*");
-                Stream stream = context.Request.InputStream;
-                StreamReader reader = new StreamReader(stream, Encoding.UTF8);
-                content = reader.ReadToEnd();
-
-                content = Tools.StringToUnicode(content);
-
-                log = "Post content: " + content;
-                Console.WriteLine("Post content: " + content);
-
-                HttpSendAsync(context, content);
+                OptionsRequestProcess(context);
             }
-            else if (request.HttpMethod == "GET")
+            else if (request.HttpMethod == "POST") 
             {
-                var content_ = request.QueryString;
+                PostRequestProcess(context); 
+            }
+            else if (request.HttpMethod == "GET") 
+            {
+                GetRequestProcess(context); 
             }
         }
 
@@ -101,16 +82,38 @@ namespace HttpServer.Core
             writer.Write(finalPkg);
             writer.Close();
         }
-    }
 
-    class Program
-    {
-        static void Main(string[] args)
+        public void OptionsRequestProcess(HttpListenerContext context)
         {
-            HttpServer httpServer = new HttpServer("192.168.3.34", "5800");
-            httpServer.Launcher();
-            // Thread thread = new Thread(new ThreadStart(httpServer.LauncherServer, "", ""));
-            // thread.Start();
+            HttpListenerResponse response = context.Response;
+            response.AddHeader("Access-Control-Allow-Credentials", "true");
+            response.AddHeader("Access-Control-Allow-Headers", "Content-Type, Accept, X-Request-Method, X-Access-Token, X-Application-Name, X-Request-Sent-Time, X-Requested-With");
+            response.AddHeader("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
+            response.AppendHeader("Access-Control-Allow-Origin", "*");
+            HttpSendAsync(context, "");
+        }
+
+        public void PostRequestProcess(HttpListenerContext context)
+        {
+            HttpListenerResponse response = context.Response;
+            response.AppendHeader("Access-Control-Allow-Origin", "*");
+
+            Stream stream = context.Request.InputStream;
+            StreamReader reader = new StreamReader(stream, Encoding.UTF8);
+
+            content = reader.ReadToEnd();
+            content = Tools.StringToUnicode(content);
+
+            string log = "Post content: " + content;
+            Console.WriteLine(log);
+
+            HttpSendAsync(context, content);
+        }
+
+        public void GetRequestProcess(HttpListenerContext context)
+        {
+            HttpListenerRequest request = context.Request;
+            var content = request.QueryString;
         }
     }
 }

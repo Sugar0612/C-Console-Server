@@ -1,12 +1,163 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {},
-    "net8.0/win-x64": {}
+    "net8.0": {
+      "LitJson/0.18.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/LitJSON.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/LitJSON.dll": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
+        }
+      },
+      "UniTask/2.5.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "compile": {
+          "lib/net7.0/UniTask.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/UniTask.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    },
+    "net8.0/win-x64": {
+      "LitJson/0.18.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/LitJSON.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/LitJSON.dll": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
+        }
+      },
+      "UniTask/2.5.10": {
+        "type": "package",
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "compile": {
+          "lib/net7.0/UniTask.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/UniTask.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "LitJson/0.18.0": {
+      "sha512": "zVK/1iUURxvEZH1eiviFpS8Qbh1fZe926ie18vhHuisVYcNbdVjgG85X8BsGt7WBU5Ka3gZvaQXRX6EsoD2hrw==",
+      "type": "package",
+      "path": "litjson/0.18.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/LitJSON.dll",
+        "lib/net35/LitJSON.dll",
+        "lib/net40/LitJSON.dll",
+        "lib/net45/LitJSON.dll",
+        "lib/net6.0/LitJSON.dll",
+        "lib/netstandard1.5/LitJSON.dll",
+        "lib/netstandard2.0/LitJSON.dll",
+        "lib/netstandard2.1/LitJSON.dll",
+        "litjson.0.18.0.nupkg.sha512",
+        "litjson.nuspec",
+        "litjson.png"
+      ]
+    },
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "type": "package",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Threading.Tasks.Extensions.dll",
+        "lib/net461/System.Threading.Tasks.Extensions.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "UniTask/2.5.10": {
+      "sha512": "Ykx4+upma5Mg9Y4RhiN04vWh7ignHwJkyyWXPYJODl0fE39cHNKie//9pbheRmtJV8fEfnFAeRDlyfMZQ6UjjQ==",
+      "type": "package",
+      "path": "unitask/2.5.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/UniTask.dll",
+        "lib/net6.0/UniTask.xml",
+        "lib/net7.0/UniTask.dll",
+        "lib/net7.0/UniTask.xml",
+        "lib/netstandard2.0/UniTask.dll",
+        "lib/netstandard2.0/UniTask.xml",
+        "lib/netstandard2.1/UniTask.dll",
+        "lib/netstandard2.1/UniTask.xml",
+        "unitask.2.5.10.nupkg.sha512",
+        "unitask.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "LitJson >= 0.18.0",
+      "UniTask >= 2.5.10"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Administrator\\.nuget\\packages\\": {}
@@ -14,11 +165,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Project\\HttpServer\\HttpServer\\HttpServer.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\HttpServer.csproj",
       "projectName": "HttpServer",
-      "projectPath": "E:\\Project\\HttpServer\\HttpServer\\HttpServer.csproj",
+      "projectPath": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\HttpServer.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\Project\\HttpServer\\HttpServer\\obj\\publish\\win-x64\\",
+      "outputPath": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\obj\\publish\\win-x64\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -51,6 +202,16 @@
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
+        "dependencies": {
+          "LitJson": {
+            "target": "Package",
+            "version": "[0.18.0, )"
+          },
+          "UniTask": {
+            "target": "Package",
+            "version": "[2.5.10, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

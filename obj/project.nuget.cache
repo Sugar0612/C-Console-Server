@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "J60Ermx/J1tCMvABL3GW3fe8UZECs6o+/5XCNCddau5yO1cpbOlmJvtry6k2dkzWISDYHx7TGS+Amw9v5KoBDw==",
+  "dgSpecHash": "niKowrE1hbf3B8UMDSsmAACubinuPQWaS1xToRop161wdLYM0bmGf9cf2n7eSbjC8NTv4ypEO1XXAK2G+z85Eg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\HttpServer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\litjson\\0.18.0\\litjson.0.18.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\unitask\\2.5.10\\unitask.2.5.10.nupkg.sha512"
+  ],
   "logs": []
 }
