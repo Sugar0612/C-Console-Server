@@ -12,10 +12,11 @@ E:\Project\HttpServer\HttpServer\obj\Release\net8.0\refint\HttpServer.dll
 E:\Project\HttpServer\HttpServer\obj\Release\net8.0\HttpServer.pdb
 E:\Project\HttpServer\HttpServer\obj\Release\net8.0\HttpServer.genruntimeconfig.cache
 E:\Project\HttpServer\HttpServer\obj\Release\net8.0\ref\HttpServer.dll
-C:\Users\Administrator\Desktop\TODO\GitProj\CsConsoleServer\bin\Release\net8.0\HttpServer.dll
 C:\Users\Administrator\Desktop\TODO\GitProj\CsConsoleServer\bin\Release\net8.0\HttpServer.exe
 C:\Users\Administrator\Desktop\TODO\GitProj\CsConsoleServer\bin\Release\net8.0\HttpServer.deps.json
 C:\Users\Administrator\Desktop\TODO\GitProj\CsConsoleServer\bin\Release\net8.0\HttpServer.runtimeconfig.json
+C:\Users\Administrator\Desktop\TODO\GitProj\CsConsoleServer\bin\Release\net8.0\HttpServer.dll
+C:\Users\Administrator\Desktop\TODO\GitProj\CsConsoleServer\bin\Release\net8.0\HttpServer.pdb
 C:\Users\Administrator\Desktop\TODO\GitProj\CsConsoleServer\bin\Release\net8.0\LitJSON.dll
 C:\Users\Administrator\Desktop\TODO\GitProj\CsConsoleServer\bin\Release\net8.0\UniTask.dll
 C:\Users\Administrator\Desktop\TODO\GitProj\CsConsoleServer\obj\Release\net8.0\HttpServer.csproj.AssemblyReference.cache
@@ -29,5 +30,4 @@ C:\Users\Administrator\Desktop\TODO\GitProj\CsConsoleServer\obj\Release\net8.0\H
 C:\Users\Administrator\Desktop\TODO\GitProj\CsConsoleServer\obj\Release\net8.0\refint\HttpServer.dll
 C:\Users\Administrator\Desktop\TODO\GitProj\CsConsoleServer\obj\Release\net8.0\HttpServer.pdb
 C:\Users\Administrator\Desktop\TODO\GitProj\CsConsoleServer\obj\Release\net8.0\HttpServer.genruntimeconfig.cache
-C:\Users\Administrator\Desktop\TODO\GitProj\CsConsoleServer\bin\Release\net8.0\HttpServer.pdb
 C:\Users\Administrator\Desktop\TODO\GitProj\CsConsoleServer\obj\Release\net8.0\ref\HttpServer.dll

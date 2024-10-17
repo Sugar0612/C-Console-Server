@@ -27,20 +27,39 @@ namespace HttpServer.Frame.Storage
             HardDisk2Memory(PathAPI.STORAGE_COURSE, out courseInfo);
             HardDisk2Memory(PathAPI.STORAGE_EXAMINE, out examineesInfo);
             HardDisk2Memory(PathAPI.STORAGE_SCORE, out scoresInfo);
-            Memory2HardDisk();
+        }
+
+        public void Save()
+        {
+            Memory2HardDisk(PathAPI.STORAGE_USER, usersInfo);
+            Memory2HardDisk(PathAPI.STORAGE_RESOURCE, rsCheck);
+            Memory2HardDisk(PathAPI.STORAGE_FACULTY, faculiesInfo);
+            Memory2HardDisk(PathAPI.STORAGE_MAJOR, majorInfo);
+            Memory2HardDisk(PathAPI.STORAGE_CLASS, classesInfo);
+            Memory2HardDisk(PathAPI.STORAGE_COLUMNS, columnsInfo);
+            Memory2HardDisk(PathAPI.STORAGE_COURSE, courseInfo);
+            Memory2HardDisk(PathAPI.STORAGE_EXAMINE, examineesInfo);
+            Memory2HardDisk(PathAPI.STORAGE_SCORE, scoresInfo);
         }
 
         private void HardDisk2Memory<T>(string filePath, out List<T> targetList)
         {
             string jsonString = FileHelper.ReadTextFile(filePath);
+            if (jsonString.Count() == 0)
+            {
+                targetList = new List<T>();
+                return;
+            }
+            
             targetList = JsonMapper.ToObject<List<T>>(jsonString);
         }
 
-        public void Memory2HardDisk()
+        private void Memory2HardDisk<T>(string savePath, List<T> saveList)
         {
-            string json = JsonMapper.ToJson(usersInfo);
-            
-            FileHelper.WriteTextFile($"{System.AppDomain.CurrentDomain.BaseDirectory}/UsersInfo.json", json);
+            if (saveList == null) return;
+            string json = JsonMapper.ToJson(saveList);
+            Console.WriteLine($"{savePath}: {json}");
+            FileHelper.WriteTextFile(savePath, json);
         }
     }
 }

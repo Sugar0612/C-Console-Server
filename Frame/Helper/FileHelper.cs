@@ -12,18 +12,20 @@ namespace HttpServer.Frame.Helper
         /// <param name="contents">内容</param>
         public static void WriteTextFile(string path, string contents)
         {
-            if (!File.Exists(path))  // 判断是否已有相同文件 
+            FileMode fileMode;
+            if (!File.Exists(path)) fileMode = FileMode.OpenOrCreate;
+            else fileMode = FileMode.Open;
+
+            using (FileStream fs = new FileStream(path, fileMode, System.IO.FileAccess.ReadWrite, FileShare.ReadWrite))
             {
-                using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, System.IO.FileAccess.ReadWrite, FileShare.ReadWrite))
+                fs.Seek(0, SeekOrigin.Begin);
+                fs.SetLength(0);
+                using (StreamWriter sw = new StreamWriter(fs, Encoding.UTF8))
                 {
-                    fs.Seek(0, SeekOrigin.Begin);
-                    fs.SetLength(0);
-                    using (StreamWriter sw = new StreamWriter(fs, Encoding.UTF8))
-                    {
-                        sw.WriteLine(contents);
-                    }
+                    sw.WriteLine(contents);
                 }
             }
+
         }
 
         /// <summary>

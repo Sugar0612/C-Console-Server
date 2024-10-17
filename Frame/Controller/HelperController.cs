@@ -18,5 +18,10 @@ namespace HttpServer.Frame.Controller
             m_httpHelper.Laucher();
             m_storageHelper.LoadHardDisk2Memory();
         }
+
+        public void Close()
+        {
+            m_storageHelper.SaveHardDisk();
+        }
     }
 }
