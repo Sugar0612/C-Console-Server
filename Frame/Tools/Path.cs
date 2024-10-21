@@ -12,6 +12,7 @@
         public static string STORAGE_COLUMNS = $"{STORAGE_ROOT_PATH}\\Data\\ColumnsInfo.json";
         public static string STORAGE_COURSE = $"{STORAGE_ROOT_PATH}\\Data\\CourseInfo.json";
         public static string STORAGE_EXAMINE = $"{STORAGE_ROOT_PATH}\\Data\\ExamineInfo.json";
-        public static string STORAGE_SCORE = $"{STORAGE_ROOT_PATH}\\Data\\ScoreInfo.json"; 
+        public static string STORAGE_SCORE = $"{STORAGE_ROOT_PATH}\\Data\\ScoreInfo.json";
+        public static string STORAGE_SOFTWARE = $"{STORAGE_ROOT_PATH}\\Data\\Software.json";
     }
 }

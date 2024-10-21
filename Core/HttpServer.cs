@@ -1,6 +1,9 @@
-﻿using HttpServer.Frame.Tools;
+﻿using HttpServer.Frame.Helper;
+using HttpServer.Frame.Storage;
+using HttpServer.Frame.Tools;
 using HttpServer.RunTime.Event;
 using LitJson;
+using System.Diagnostics;
 using System.Net;
 using System.Text;
 
@@ -56,18 +59,7 @@ namespace HttpServer.Core
             string log = $"{DateTime.Now} new Request , Method is : {request.HttpMethod}";
             Console.WriteLine(log);
 
-            if (request.HttpMethod == "OPTIONS")
-            {
-                OptionsRequestProcess(context);
-            }
-            else if (request.HttpMethod == "POST") 
-            {
-                PostRequestProcess(context);
-            }
-            else if (request.HttpMethod == "GET")
-            {
-                GetRequestProcess(context);
-            }
+            NativePostRequest(context);
         }
 
         public static void Send(HttpListenerContext context, string mess)
@@ -106,6 +98,55 @@ namespace HttpServer.Core
             response.AddHeader("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
             response.AppendHeader("Access-Control-Allow-Origin", "*");
             Send(context, "");
+        }
+
+        public async void NativePostRequest(HttpListenerContext context)
+        {
+            HttpListenerRequest request = context.Request;
+            string? actionName = request.Url?.AbsolutePath;
+            if (actionName == null) return;
+
+            Console.WriteLine($"actionName: {actionName}");
+
+            if (actionName == "/getUserList" && request.HttpMethod == "POST")
+            {
+                Console.WriteLine("Doing Get UserList.");
+                List<UserInfo> usersList = await StorageHelper.GetInfo(StorageHelper.m_storageObj.usersInfo);
+                string retContext = JsonMapper.ToJson(usersList);
+                NativeSend(context.Response, retContext);
+            }
+            else if (actionName == "/getSoftwareList" && request.HttpMethod == "POST")
+            {
+                Console.WriteLine("Doing Get SoftwareList.");
+                List<SoftwareInfo> softwareList = await StorageHelper.GetInfo(StorageHelper.m_storageObj.softwareInfo);
+                string retContext = JsonMapper.ToJson(softwareList);
+                NativeSend(context.Response, retContext);
+            }
+            else if (actionName == "/")
+            {
+                if (request.HttpMethod == "OPTIONS")
+                {
+                    OptionsRequestProcess(context);
+                }
+                else if (request.HttpMethod == "POST")
+                {
+                    PostRequestProcess(context);
+                }
+                else if (request.HttpMethod == "GET")
+                {
+                    GetRequestProcess(context);
+                }
+            }
+        }
+
+        public void NativeSend(HttpListenerResponse response, string retMessage)
+        {
+            response.ContentLength64 = Encoding.UTF8.GetByteCount(retMessage);
+            response.ContentType = "text/html; charset=UTF-8";
+            Stream output = response.OutputStream;
+            StreamWriter writer = new StreamWriter(output);
+            writer.Write(retMessage);
+            writer.Close();
         }
 
         public void PostRequestProcess(HttpListenerContext context)

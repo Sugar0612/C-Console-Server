@@ -15,6 +15,7 @@ namespace HttpServer.Frame.Storage
         public List<CourseInfo> courseInfo = new List<CourseInfo>();
         public List<ExamineInfo> examineesInfo = new List<ExamineInfo>();
         public List<ScoreInfo> scoresInfo = new List<ScoreInfo>();
+        public List<SoftwareInfo> softwareInfo = new List<SoftwareInfo>();
 
         public void Init()
         {
@@ -27,6 +28,7 @@ namespace HttpServer.Frame.Storage
             HardDisk2Memory(PathAPI.STORAGE_COURSE, out courseInfo);
             HardDisk2Memory(PathAPI.STORAGE_EXAMINE, out examineesInfo);
             HardDisk2Memory(PathAPI.STORAGE_SCORE, out scoresInfo);
+            HardDisk2Memory(PathAPI.STORAGE_SOFTWARE, out softwareInfo);
         }
 
         public void Save()
@@ -40,6 +42,7 @@ namespace HttpServer.Frame.Storage
             Memory2HardDisk(PathAPI.STORAGE_COURSE, courseInfo);
             Memory2HardDisk(PathAPI.STORAGE_EXAMINE, examineesInfo);
             Memory2HardDisk(PathAPI.STORAGE_SCORE, scoresInfo);
+            Memory2HardDisk(PathAPI.STORAGE_SOFTWARE, softwareInfo);
         }
 
         private void HardDisk2Memory<T>(string filePath, out List<T> targetList)

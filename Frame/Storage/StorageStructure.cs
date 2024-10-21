@@ -310,4 +310,15 @@
             return inf;
         }
     }
+
+    /// <summary>
+    /// 软件信息
+    /// </summary>
+    public class SoftwareInfo : BaseInfo
+    {
+        public string Name = ""; // 软件名
+        public string Cover = ""; // 封面路径
+        public string QRcode = ""; // 二维码路径
+        public string ProjPath = ""; // 软件路径
+    }
 }

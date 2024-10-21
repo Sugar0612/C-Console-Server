@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="HttpServer.exe" version="1.0.0.9" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="HttpServer.exe" version="1.0.0.15" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Launcher" version="8.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -125,13 +125,13 @@
       <dsig:DigestValue>P1DA2Hqrt2GSn8xVjehTFZCoCZLaZs0t6qDe54HqmPo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="HttpServer.dll" size="74752">
+  <file name="HttpServer.dll" size="76800">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>vhEtK9gftOBr+Yyv7ieM7XHdYEkRZ8MDwOjsf+J+PT0=</dsig:DigestValue>
+      <dsig:DigestValue>9QGuekQVQZHE4Q84u0+2YzVjg3VDcdslWw2GwXC057A=</dsig:DigestValue>
     </hash>
   </file>
   <file name="HttpServer.exe" size="142336">
@@ -140,7 +140,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>myaFxbW98DR9CgoO8mr8yKeM+FxquXBMxBhqIQfRhDw=</dsig:DigestValue>
+      <dsig:DigestValue>r2R3Y68UoT5MT3GtuXZkMMUhHVo2OGo/4Fa4Jnm8iI4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="HttpServer.runtimeconfig.json" size="371">
