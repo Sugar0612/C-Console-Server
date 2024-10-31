@@ -122,7 +122,24 @@ namespace HttpServer.Core
                 string retContext = JsonMapper.ToJson(softwareList);
                 NativeSend(context.Response, retContext);
             }
-            else if (actionName == "/")
+            else if (actionName == "/Login" && request.HttpMethod == "POST")
+            {
+                Console.WriteLine("Doing Login Request!");
+                string content = GetRequestContent(context);
+                UserInfo inf = JsonMapper.ToObject<UserInfo>(content);
+                inf = StorageHelper.CheckUserLogin(inf);
+                string s_inf = JsonMapper.ToJson(inf);
+                NativeSend(context.Response, s_inf);
+            }
+            else if (actionName == "/Register" && request.HttpMethod == "POST")
+            {
+                string content = GetRequestContent(context);
+                UserInfo inf = JsonMapper.ToObject<UserInfo>(content);
+                inf = await StorageHelper.Register(inf);
+                string s_inf = JsonMapper.ToJson(inf);
+                NativeSend(context.Response, s_inf);
+            }
+            else
             {
                 if (request.HttpMethod == "OPTIONS")
                 {
@@ -272,6 +289,15 @@ namespace HttpServer.Core
                 }
             }
             check(pkg);
+        }
+
+        public static string GetRequestContent(HttpListenerContext context)
+        {
+            Stream stream = context.Request.InputStream;
+            StreamReader reader = new StreamReader(stream, Encoding.UTF8);
+            string content = reader.ReadToEnd();
+            content = Tools.StringToUnicode(content);
+            return content;
         }
 
         /// <summary>

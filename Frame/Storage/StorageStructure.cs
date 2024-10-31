@@ -316,6 +316,7 @@
     /// </summary>
     public class SoftwareInfo : BaseInfo
     {
+        public string id = ""; // 项目唯一id
         public string Name = ""; // 软件名
         public string Cover = ""; // 封面路径
         public string QRcode = ""; // 二维码路径

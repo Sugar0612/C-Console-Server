@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\frame\\helper\\httphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|solutionrelative:frame\\helper\\httphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\core\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|solutionrelative:core\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\frame\\helper\\jsonhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|solutionrelative:frame\\helper\\jsonhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\runtime\\event\\general\\register\\registerevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|solutionrelative:runtime\\event\\general\\register\\registerevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\frame\\storage\\storageobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|solutionrelative:frame\\storage\\storageobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\frame\\helper\\httphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|solutionrelative:frame\\helper\\httphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\frame\\storage\\storagestructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|solutionrelative:frame\\storage\\storagestructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\frame\\tools\\path.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|solutionrelative:frame\\tools\\path.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\frame\\storage\\storageobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|solutionrelative:frame\\storage\\storageobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\frame\\helper\\storagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,16 +31,32 @@
       "RelativeMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|solutionrelative:frame\\helper\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\frame\\helper\\jsonhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|solutionrelative:frame\\helper\\jsonhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\runtime\\event\\general\\login\\userloginevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|solutionrelative:runtime\\event\\general\\login\\userloginevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\core\\launcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|solutionrelative:core\\launcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\runtime\\event\\module\\user\\userevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|solutionrelative:runtime\\event\\module\\user\\userevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\frame\\tools\\tools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|solutionrelative:frame\\tools\\tools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\frame\\controller\\helpercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|solutionrelative:frame\\controller\\helpercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\frame\\tools\\path.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|solutionrelative:frame\\tools\\path.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\runtime\\event\\module\\user\\userevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|solutionrelative:runtime\\event\\module\\user\\userevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{57DAE077-68F2-4B8B-B2C5-D6FEE64FDC2A}|HttpServer.csproj|c:\\users\\administrator\\desktop\\todo\\gitproj\\csconsoleserver\\runtime\\event\\resources\\upload\\uploadevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,60 +82,175 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "RegisterEvent.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\RunTime\\Event\\General\\register\\RegisterEvent.cs",
+              "RelativeDocumentMoniker": "RunTime\\Event\\General\\register\\RegisterEvent.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\RunTime\\Event\\General\\register\\RegisterEvent.cs",
+              "RelativeToolTip": "RunTime\\Event\\General\\register\\RegisterEvent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABrAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T11:23:26.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserLoginEvent.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\RunTime\\Event\\General\\login\\UserLoginEvent.cs",
+              "RelativeDocumentMoniker": "RunTime\\Event\\General\\login\\UserLoginEvent.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\RunTime\\Event\\General\\login\\UserLoginEvent.cs",
+              "RelativeToolTip": "RunTime\\Event\\General\\login\\UserLoginEvent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T10:46:45.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StorageObject.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Storage\\StorageObject.cs",
+              "RelativeDocumentMoniker": "Frame\\Storage\\StorageObject.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Storage\\StorageObject.cs",
+              "RelativeToolTip": "Frame\\Storage\\StorageObject.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T06:09:10.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StorageStructure.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Storage\\StorageStructure.cs",
+              "RelativeDocumentMoniker": "Frame\\Storage\\StorageStructure.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Storage\\StorageStructure.cs",
+              "RelativeToolTip": "Frame\\Storage\\StorageStructure.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4BAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T07:30:31.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "HttpServer.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Core\\HttpServer.cs",
               "RelativeDocumentMoniker": "Core\\HttpServer.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Core\\HttpServer.cs",
               "RelativeToolTip": "Core\\HttpServer.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAowHUAAABTAAAA",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAwwHsAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T00:47:40.623Z"
+              "WhenOpened": "2024-10-21T00:47:40.623Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Launcher.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Core\\Launcher.cs",
-              "RelativeDocumentMoniker": "Core\\Launcher.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Core\\Launcher.cs",
-              "RelativeToolTip": "Core\\Launcher.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAA9wEQAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T06:56:02.181Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "HttpHelper.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Helper\\HttpHelper.cs",
               "RelativeDocumentMoniker": "Frame\\Helper\\HttpHelper.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Helper\\HttpHelper.cs",
               "RelativeToolTip": "Frame\\Helper\\HttpHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABCAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T06:24:21.125Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
+              "Title": "StorageHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Helper\\StorageHelper.cs",
+              "RelativeDocumentMoniker": "Frame\\Helper\\StorageHelper.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Helper\\StorageHelper.cs",
+              "RelativeToolTip": "Frame\\Helper\\StorageHelper.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBsAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T06:21:43.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Launcher.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Core\\Launcher.cs",
+              "RelativeDocumentMoniker": "Core\\Launcher.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Core\\Launcher.cs",
+              "RelativeToolTip": "Core\\Launcher.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAIA1wEQAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T06:56:02.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "FileHelper.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Helper\\FileHelper.cs",
               "RelativeDocumentMoniker": "Frame\\Helper\\FileHelper.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Helper\\FileHelper.cs",
               "RelativeToolTip": "Frame\\Helper\\FileHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBEAAAAAAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwBEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T06:15:52.753Z"
+              "WhenOpened": "2024-10-17T06:15:52.753Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 7,
+              "Title": "JsonHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Helper\\JsonHelper.cs",
+              "RelativeDocumentMoniker": "Frame\\Helper\\JsonHelper.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Helper\\JsonHelper.cs",
+              "RelativeToolTip": "Frame\\Helper\\JsonHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T05:54:44.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HelperController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Controller\\HelperController.cs",
+              "RelativeDocumentMoniker": "Frame\\Controller\\HelperController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Controller\\HelperController.cs",
+              "RelativeToolTip": "Frame\\Controller\\HelperController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T07:18:02.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Tools.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Tools\\Tools.cs",
+              "RelativeDocumentMoniker": "Frame\\Tools\\Tools.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Tools\\Tools.cs",
+              "RelativeToolTip": "Frame\\Tools\\Tools.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T09:46:26.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Path.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Tools\\Path.cs",
+              "RelativeDocumentMoniker": "Frame\\Tools\\Path.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Tools\\Path.cs",
+              "RelativeToolTip": "Frame\\Tools\\Path.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T09:15:06.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "DownLoadEvent.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\RunTime\\Event\\Resources\\Download\\DownLoadEvent.cs",
               "RelativeDocumentMoniker": "RunTime\\Event\\Resources\\Download\\DownLoadEvent.cs",
@@ -135,67 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "StorageObject.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Storage\\StorageObject.cs",
-              "RelativeDocumentMoniker": "Frame\\Storage\\StorageObject.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Storage\\StorageObject.cs",
-              "RelativeToolTip": "Frame\\Storage\\StorageObject.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T06:09:10.158Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StorageStructure.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Storage\\StorageStructure.cs",
-              "RelativeDocumentMoniker": "Frame\\Storage\\StorageStructure.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Storage\\StorageStructure.cs",
-              "RelativeToolTip": "Frame\\Storage\\StorageStructure.cs",
-              "ViewState": "AQIAAO4AAAAAAAAAAAAxwDkBAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T07:30:31.677Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Path.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Tools\\Path.cs",
-              "RelativeDocumentMoniker": "Frame\\Tools\\Path.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Tools\\Path.cs",
-              "RelativeToolTip": "Frame\\Tools\\Path.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T09:15:06.387Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "JsonHelper.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Helper\\JsonHelper.cs",
-              "RelativeDocumentMoniker": "Frame\\Helper\\JsonHelper.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Helper\\JsonHelper.cs",
-              "RelativeToolTip": "Frame\\Helper\\JsonHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T05:54:44.641Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "StorageHelper.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Helper\\StorageHelper.cs",
-              "RelativeDocumentMoniker": "Frame\\Helper\\StorageHelper.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Helper\\StorageHelper.cs",
-              "RelativeToolTip": "Frame\\Helper\\StorageHelper.cs",
-              "ViewState": "AQIAAGsAAAAAAAAAAADwv34AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T06:21:43.571Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "ResEvent.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\RunTime\\Event\\Resources\\ResEvent.cs",
               "RelativeDocumentMoniker": "RunTime\\Event\\Resources\\ResEvent.cs",
@@ -207,7 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "UploadEvent.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\RunTime\\Event\\Resources\\Upload\\UploadEvent.cs",
               "RelativeDocumentMoniker": "RunTime\\Event\\Resources\\Upload\\UploadEvent.cs",
@@ -219,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "UserEvent.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\RunTime\\Event\\Module\\User\\UserEvent.cs",
               "RelativeDocumentMoniker": "RunTime\\Event\\Module\\User\\UserEvent.cs",
@@ -231,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "CheckEvent.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\RunTime\\Event\\Resources\\Check\\CheckEvent.cs",
               "RelativeDocumentMoniker": "RunTime\\Event\\Resources\\Check\\CheckEvent.cs",
@@ -240,18 +307,6 @@
               "ViewState": "AQIAAAoAAAAAAAAAAAAzwCQAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T05:54:09.158Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Tools.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Tools\\Tools.cs",
-              "RelativeDocumentMoniker": "Frame\\Tools\\Tools.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\Frame\\Tools\\Tools.cs",
-              "RelativeToolTip": "Frame\\Tools\\Tools.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T09:46:26.892Z"
             }
           ]
         }
