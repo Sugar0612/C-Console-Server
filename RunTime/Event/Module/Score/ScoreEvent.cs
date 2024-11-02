@@ -4,6 +4,7 @@ using HttpServer.Frame.Helper;
 using HttpServer.Frame.Storage;
 using HttpServer.RunTime.Event;
 using LitJson;
+using System.Diagnostics;
 using static HttpServer.Core.CHttpServer;
 
 public class ScoreEvent : BaseEvent
@@ -35,12 +36,14 @@ public class ScoreEvent : BaseEvent
         ScoreInfo info = JsonMapper.ToObject<ScoreInfo>(pkg.messPkg.ret);
         int index = StorageHelper.m_storageObj.scoresInfo.FindIndex(x => x.userName == info.userName 
                             && x.courseName == info.courseName && x.registerTime == info.registerTime && x.className == info.className);
+        // Console.WriteLine($"{info.columnsName} | {info.courseName} | {info.registerTime} | {info.trainingFinished} and index: {index}");
         if (index < 0 || index >= StorageHelper.m_storageObj.scoresInfo.Count) 
         {
             StorageHelper.m_storageObj.scoresInfo.Add(info);
             int examIdx = StorageHelper.m_storageObj.examineesInfo.FindIndex(x => x.ColumnsName == info.columnsName && x.CourseName == info.courseName
                         && x.RegisterTime == info.registerTime);
-            StorageHelper.m_storageObj.examineesInfo[examIdx].PNum += 1;
+            if (examIdx >= 0 && examIdx < StorageHelper.m_storageObj.examineesInfo.Count)
+                StorageHelper.m_storageObj.examineesInfo[examIdx].PNum += 1;
         }
         else StorageHelper.m_storageObj.scoresInfo[index] = info;
         

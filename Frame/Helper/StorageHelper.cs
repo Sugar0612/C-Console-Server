@@ -169,9 +169,9 @@ namespace HttpServer.Frame.Helper
             if (index != -1)
             {
                 storInfo[index] = inf;
+                m_storageObj.Save();
                 return storInfo;
             }
-            m_storageObj.Save();
             return new List<T>();
         }
 

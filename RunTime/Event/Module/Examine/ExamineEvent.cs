@@ -28,9 +28,11 @@ public class ExamineEvent : BaseEvent
 
     public override async void ReviseInfoEvent(AsyncExpandPkg pkg)
     {
+        //Console.WriteLine($"Examine ReviseInfoEvent...");
         List<ExamineInfo> infoList = JsonMapper.ToObject<List<ExamineInfo>>(pkg.messPkg.ret);
         foreach (var info in infoList)
         {
+            //Console.WriteLine($"{info.id} : {info.CourseName}");
             List<ExamineInfo> inf = await StorageHelper.ReviseInfo(info, StorageHelper.m_storageObj.examineesInfo, x => x.id == info.id);   
             string s_inf = JsonMapper.ToJson(inf);
             CHttpServer.HttpSendAsync(pkg.Context, s_inf, EventType.ExamineEvent, OperateType.REVISE);

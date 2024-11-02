@@ -75,7 +75,7 @@ namespace HttpServer.Core
 
         public static void HttpSendAsync(HttpListenerContext context, string mess, EventType event_type, OperateType operateType)
         {
-            // Debug.Log("Send: " + mess);
+            // Console.WriteLine("Send: " + mess);
             string front = FrontPackage(mess, event_type, operateType);
             string totalInfoPkg = "|" + front + "#" + mess + "@";
             long totalLength = totalInfoPkg.Count();
@@ -110,21 +110,18 @@ namespace HttpServer.Core
 
             if (actionName == "/getUserList" && request.HttpMethod == "POST")
             {
-                Console.WriteLine("Doing Get UserList.");
                 List<UserInfo> usersList = await StorageHelper.GetInfo(StorageHelper.m_storageObj.usersInfo);
                 string retContext = JsonMapper.ToJson(usersList);
                 NativeSend(context.Response, retContext);
             }
             else if (actionName == "/getSoftwareList" && request.HttpMethod == "POST")
             {
-                Console.WriteLine("Doing Get SoftwareList.");
                 List<SoftwareInfo> softwareList = await StorageHelper.GetInfo(StorageHelper.m_storageObj.softwareInfo);
                 string retContext = JsonMapper.ToJson(softwareList);
                 NativeSend(context.Response, retContext);
             }
             else if (actionName == "/Login" && request.HttpMethod == "POST")
             {
-                Console.WriteLine("Doing Login Request!");
                 string content = GetRequestContent(context);
                 UserInfo inf = JsonMapper.ToObject<UserInfo>(content);
                 inf = StorageHelper.CheckUserLogin(inf);
@@ -178,7 +175,7 @@ namespace HttpServer.Core
             content = Tools.StringToUnicode(content);
 
             string log = "Post content: " + content;
-            Console.WriteLine(log);
+            // Console.WriteLine(log);
 
             MessPackage client_pkg = new MessPackage();
             AsyncExpandPkg pkg = new AsyncExpandPkg();
@@ -255,8 +252,8 @@ namespace HttpServer.Core
             int messLength = pkg.messPkg.ret.Count() + 2;
             float percent = messLength * 1.0f / pkg.messPkg.length * 1.0f * 100.0f;
             // Debug.Log($"messLength: {messLength}, messLength: {pkg.messPkg.ret}");
-            // Debug.Log($"pkg.messPkg.length: {pkg.messPkg.length}, percent: {percent}");
-            if (percent == 100.0f)
+            Console.WriteLine($"pkg.messPkg.length: {pkg.messPkg.length}, percent: {percent}");
+            if (percent >= 100.0f || percent >= 99.99f)
             {
                 pkg.messPkg.finish = true;
                 ParsingThePackageBody(pkg.messPkg.ret, pkg);
