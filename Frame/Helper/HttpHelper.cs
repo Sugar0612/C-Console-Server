@@ -11,7 +11,7 @@ namespace HttpServer.Frame.Helper
     {
         public void Laucher()
         {
-            CHttpServer httpServer = new CHttpServer("10.0.2.155", "5800");
+            CHttpServer httpServer = new CHttpServer("127.0.0.1", "5800");
 
             Thread thread = new Thread(new ThreadStart(httpServer.Launcher));
             thread.Start();

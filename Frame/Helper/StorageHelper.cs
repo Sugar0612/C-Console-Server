@@ -176,6 +176,23 @@ namespace HttpServer.Frame.Helper
         }
 
         /// <summary>
+        /// 修改
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public static T ReviseInfoSingle<T>(T inf, List<T> storInfo, Predicate<T> match) where T : BaseInfo, new()
+        {
+            int index = storInfo.FindIndex(match);
+            if (index != -1)
+            {
+                storInfo[index] = inf;
+                m_storageObj.Save();
+                return storInfo[index];
+            }
+            return new T();
+        }
+
+        /// <summary>
         /// 删除
         /// </summary>
         /// <typeparam name="T"></typeparam>

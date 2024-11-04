@@ -136,6 +136,14 @@ namespace HttpServer.Core
                 string s_inf = JsonMapper.ToJson(inf);
                 NativeSend(context.Response, s_inf);
             }
+            else if (actionName == "/UserExit" && request.HttpMethod == "POST")
+            {
+                string content = GetRequestContent(context);
+                UserInfo inf = JsonMapper.ToObject<UserInfo>(content);
+                inf = StorageHelper.ReviseInfoSingle(inf, StorageHelper.m_storageObj.usersInfo, x => x.userName == inf.userName);
+                string s_inf = JsonMapper.ToJson(inf);
+                NativeSend(context.Response, s_inf);
+            }
             else
             {
                 if (request.HttpMethod == "OPTIONS")

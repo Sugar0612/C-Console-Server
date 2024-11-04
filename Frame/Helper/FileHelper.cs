@@ -25,7 +25,6 @@ namespace HttpServer.Frame.Helper
                     sw.WriteLine(contents);
                 }
             }
-
         }
 
         /// <summary>
