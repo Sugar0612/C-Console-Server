@@ -61,7 +61,7 @@ namespace HttpServer.Frame.Storage
         {
             if (saveList == null) return;
             string json = JsonMapper.ToJson(saveList);
-            Console.WriteLine($"{savePath}: {json}");
+            //Console.WriteLine($"{savePath}: {json}");
             FileHelper.WriteTextFile(savePath, json);
         }
     }

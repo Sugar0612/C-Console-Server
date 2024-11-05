@@ -166,10 +166,10 @@ namespace HttpServer.Frame.Helper
         public static async UniTask<List<T>> ReviseInfo<T>(T inf, List<T> storInfo, Predicate<T> match) where T : BaseInfo
         {
             int index = storInfo.FindIndex(match);
+            Console.WriteLine($"reviseInfo: {index}");
             if (index != -1)
             {
                 storInfo[index] = inf;
-                m_storageObj.Save();
                 return storInfo;
             }
             return new List<T>();

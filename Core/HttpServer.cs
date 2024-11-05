@@ -82,7 +82,8 @@ namespace HttpServer.Core
             string finalPkg = totalLength.ToString() + totalInfoPkg;
 
             HttpListenerResponse response = context.Response;
-            response.ContentLength64 = Encoding.UTF8.GetByteCount(finalPkg);
+            long byteCount = Encoding.UTF8.GetByteCount(finalPkg);
+            // response.ContentLength64 = byteCount;
             response.ContentType = "text/html; charset=UTF-8";
             Stream output = response.OutputStream;
             StreamWriter writer = new StreamWriter(output);
