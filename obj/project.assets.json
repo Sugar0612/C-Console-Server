@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net7.0": {
-      "LitJson/0.18.0": {
+      "LitJson/0.19.0": {
         "type": "package",
         "compile": {
           "lib/net6.0/LitJSON.dll": {}
@@ -39,22 +39,25 @@
     }
   },
   "libraries": {
-    "LitJson/0.18.0": {
-      "sha512": "zVK/1iUURxvEZH1eiviFpS8Qbh1fZe926ie18vhHuisVYcNbdVjgG85X8BsGt7WBU5Ka3gZvaQXRX6EsoD2hrw==",
+    "LitJson/0.19.0": {
+      "sha512": "7hUCUSkNJBwr+K6uqTOsQSbd5AIDrCMg/ya1BPxrSOlPNoPCyDx+0PyXU61FjbRPl7WU2HavV2r89djdJnlV/g==",
       "type": "package",
-      "path": "litjson/0.18.0",
+      "path": "litjson/0.19.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "README.md",
         "lib/net20/LitJSON.dll",
         "lib/net35/LitJSON.dll",
         "lib/net40/LitJSON.dll",
         "lib/net45/LitJSON.dll",
+        "lib/net48/LitJSON.dll",
         "lib/net6.0/LitJSON.dll",
+        "lib/net8.0/LitJSON.dll",
         "lib/netstandard1.5/LitJSON.dll",
         "lib/netstandard2.0/LitJSON.dll",
         "lib/netstandard2.1/LitJSON.dll",
-        "litjson.0.18.0.nupkg.sha512",
+        "litjson.0.19.0.nupkg.sha512",
         "litjson.nuspec",
         "litjson.png"
       ]
@@ -119,31 +122,24 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "LitJson >= 0.18.0",
+      "LitJson >= 0.19.0",
       "UniTask >= 2.5.10"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lenovo\\.nuget\\packages\\": {},
-    "E:\\2019 CHEER\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\win\\the file\\Github\\CSConsoleServer\\HttpServer.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\HttpServer.csproj",
       "projectName": "HttpServer",
-      "projectPath": "F:\\win\\the file\\Github\\CSConsoleServer\\HttpServer.csproj",
-      "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "F:\\win\\the file\\Github\\CSConsoleServer\\obj\\",
+      "projectPath": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\HttpServer.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "E:\\2019 CHEER\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -163,6 +159,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -171,7 +172,7 @@
         "dependencies": {
           "LitJson": {
             "target": "Package",
-            "version": "[0.18.0, )"
+            "version": "[0.19.0, )"
           },
           "UniTask": {
             "target": "Package",
@@ -194,7 +195,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }

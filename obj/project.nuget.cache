@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "8hcqRnj2sZsagN7rXIEfb+fVTbsHP/JFIqZqjf9WjAUWAxFTr2vVCg/8/xIeQ1sUQ4p0ezc+Gj63UvOiq6llSQ==",
+  "dgSpecHash": "tqdXptlyrX3o/WdQZHru5/4FC78QIDeqvvOGJbs0RmXPPucxlqcqa9G2VrV4H8xJFUMhBt2oR500x5bXIfuNVg==",
   "success": true,
-  "projectFilePath": "F:\\win\\the file\\Github\\CSConsoleServer\\HttpServer.csproj",
+  "projectFilePath": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\HttpServer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\lenovo\\.nuget\\packages\\litjson\\0.18.0\\litjson.0.18.0.nupkg.sha512",
-    "C:\\Users\\lenovo\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\lenovo\\.nuget\\packages\\unitask\\2.5.10\\unitask.2.5.10.nupkg.sha512"
+    "C:\\Users\\Administrator\\.nuget\\packages\\litjson\\0.19.0\\litjson.0.19.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\unitask\\2.5.10\\unitask.2.5.10.nupkg.sha512"
   ],
   "logs": []
 }

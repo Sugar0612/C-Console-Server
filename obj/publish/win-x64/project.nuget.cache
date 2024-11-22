@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "sJIqu9jg9ElKjOgVjV0OfvXY/58LdsWPtv/wK2s4Zi/aZNZFEP5ahTJXznnrXRjHnfzmaqrRD9eii3iBEUBpZg==",
+  "dgSpecHash": "CxntG2E91hvNlrChMwXSc/dILWEUWwsC698nGifRRVd2z5WwJfiafNoRJ2vRZV3v4nWpkGdQTAhNKZg0YdeWEw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Administrator\\Desktop\\TODO\\GitProj\\CsConsoleServer\\HttpServer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Administrator\\.nuget\\packages\\litjson\\0.18.0\\litjson.0.18.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\litjson\\0.19.0\\litjson.0.19.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\unitask\\2.5.10\\unitask.2.5.10.nupkg.sha512",
-    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.4\\microsoft.netcore.app.runtime.win-x64.8.0.4.nupkg.sha512",
-    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.4\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.4.nupkg.sha512",
-    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.4\\microsoft.aspnetcore.app.runtime.win-x64.8.0.4.nupkg.sha512"
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\7.0.18\\microsoft.netcore.app.runtime.win-x64.7.0.18.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\7.0.18\\microsoft.windowsdesktop.app.runtime.win-x64.7.0.18.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\7.0.18\\microsoft.aspnetcore.app.runtime.win-x64.7.0.18.nupkg.sha512"
   ],
   "logs": []
 }
