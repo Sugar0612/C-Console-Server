@@ -43,7 +43,7 @@ namespace HttpServer.Frame.Helper
                 }
             }
 
-            JsonMapper.ToObject(content);
+            // JsonMapper.ToObject(content);
             return content;
         }
     }

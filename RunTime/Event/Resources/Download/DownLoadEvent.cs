@@ -17,7 +17,7 @@ public class DownLoadEvent : BaseEvent
 
             string[] split_str = rela.Split('\\');
             string name = split_str[split_str.Length - 1];
-            string path = $"{PathAPI.STORAGE_ROOT_PATH}\\Data\\{pkg.relaPath}";
+            string path = $"{FPath.STORAGE_ROOT_PATH}\\Data\\{pkg.relaPath}";
 
             DataSendPkg data = new DataSendPkg()
             { 

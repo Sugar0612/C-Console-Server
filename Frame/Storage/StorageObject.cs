@@ -19,30 +19,30 @@ namespace HttpServer.Frame.Storage
 
         public void Init()
         {
-            HardDisk2Memory(PathAPI.STORAGE_USER, out usersInfo);
-            HardDisk2Memory(PathAPI.STORAGE_RESOURCE, out rsCheck);
-            HardDisk2Memory(PathAPI.STORAGE_FACULTY, out faculiesInfo);
-            HardDisk2Memory(PathAPI.STORAGE_MAJOR, out majorInfo);
-            HardDisk2Memory(PathAPI.STORAGE_CLASS, out classesInfo);
-            HardDisk2Memory(PathAPI.STORAGE_COLUMNS, out columnsInfo);
-            HardDisk2Memory(PathAPI.STORAGE_COURSE, out courseInfo);
-            HardDisk2Memory(PathAPI.STORAGE_EXAMINE, out examineesInfo);
-            HardDisk2Memory(PathAPI.STORAGE_SCORE, out scoresInfo);
-            HardDisk2Memory(PathAPI.STORAGE_SOFTWARE, out softwareInfo);
+            HardDisk2Memory(FPath.STORAGE_USER, out usersInfo);
+            HardDisk2Memory(FPath.STORAGE_RESOURCE, out rsCheck);
+            HardDisk2Memory(FPath.STORAGE_FACULTY, out faculiesInfo);
+            HardDisk2Memory(FPath.STORAGE_MAJOR, out majorInfo);
+            HardDisk2Memory(FPath.STORAGE_CLASS, out classesInfo);
+            HardDisk2Memory(FPath.STORAGE_COLUMNS, out columnsInfo);
+            HardDisk2Memory(FPath.STORAGE_COURSE, out courseInfo);
+            HardDisk2Memory(FPath.STORAGE_EXAMINE, out examineesInfo);
+            HardDisk2Memory(FPath.STORAGE_SCORE, out scoresInfo);
+            HardDisk2Memory(FPath.STORAGE_SOFTWARE, out softwareInfo);
         }
 
         public void Save()
         {
-            Memory2HardDisk(PathAPI.STORAGE_USER, usersInfo);
-            Memory2HardDisk(PathAPI.STORAGE_RESOURCE, rsCheck);
-            Memory2HardDisk(PathAPI.STORAGE_FACULTY, faculiesInfo);
-            Memory2HardDisk(PathAPI.STORAGE_MAJOR, majorInfo);
-            Memory2HardDisk(PathAPI.STORAGE_CLASS, classesInfo);
-            Memory2HardDisk(PathAPI.STORAGE_COLUMNS, columnsInfo);
-            Memory2HardDisk(PathAPI.STORAGE_COURSE, courseInfo);
-            Memory2HardDisk(PathAPI.STORAGE_EXAMINE, examineesInfo);
-            Memory2HardDisk(PathAPI.STORAGE_SCORE, scoresInfo);
-            Memory2HardDisk(PathAPI.STORAGE_SOFTWARE, softwareInfo);
+            Memory2HardDisk(FPath.STORAGE_USER, usersInfo);
+            Memory2HardDisk(FPath.STORAGE_RESOURCE, rsCheck);
+            Memory2HardDisk(FPath.STORAGE_FACULTY, faculiesInfo);
+            Memory2HardDisk(FPath.STORAGE_MAJOR, majorInfo);
+            Memory2HardDisk(FPath.STORAGE_CLASS, classesInfo);
+            Memory2HardDisk(FPath.STORAGE_COLUMNS, columnsInfo);
+            Memory2HardDisk(FPath.STORAGE_COURSE, courseInfo);
+            Memory2HardDisk(FPath.STORAGE_EXAMINE, examineesInfo);
+            Memory2HardDisk(FPath.STORAGE_SCORE, scoresInfo);
+            Memory2HardDisk(FPath.STORAGE_SOFTWARE, softwareInfo);
         }
 
         private void HardDisk2Memory<T>(string filePath, out List<T> targetList)
@@ -53,7 +53,7 @@ namespace HttpServer.Frame.Storage
                 targetList = new List<T>();
                 return;
             }
-            
+           
             targetList = JsonMapper.ToObject<List<T>>(jsonString);
         }
 

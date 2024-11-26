@@ -1,6 +1,6 @@
 ﻿namespace HttpServer.Frame.Tools
 {
-    internal class PathAPI
+    internal class FPath
     {
         public static string STORAGE_ROOT_PATH = AppDomain.CurrentDomain.BaseDirectory; // Root 路径
 
@@ -14,5 +14,6 @@
         public static string STORAGE_EXAMINE = $"{STORAGE_ROOT_PATH}\\Data\\ExamineInfo.json";
         public static string STORAGE_SCORE = $"{STORAGE_ROOT_PATH}\\Data\\ScoreInfo.json";
         public static string STORAGE_SOFTWARE = $"{STORAGE_ROOT_PATH}\\Data\\Software.json";
+        public static string IP = $"{STORAGE_ROOT_PATH}\\Data\\IP.txt";
     }
 }

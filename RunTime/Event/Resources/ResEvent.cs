@@ -36,7 +36,7 @@ public class ResEvent : BaseEvent
         i = StorageHelper.m_storageObj.rsCheck.FindIndex(x => x.relaPath == info.relaPath);
         if (i != -1) 
         {
-            string deletePath = PathAPI.STORAGE_ROOT_PATH + "\\Data\\" + info.relaPath;
+            string deletePath = FPath.STORAGE_ROOT_PATH + "\\Data\\" + info.relaPath;
             File.Delete(deletePath);
             new_list = await StorageHelper.DeleteInfo(StorageHelper.m_storageObj.rsCheck, (x) => {return x.relaPath == info.relaPath;});
         }

@@ -11,7 +11,7 @@ public class UploadEvent : BaseEvent
     public override async void OnEvent(AsyncExpandPkg asynExPkg) 
     {
         FilePackage data = JsonMapper.ToObject<FilePackage>(asynExPkg.messPkg.ret);
-        string savepath = PathAPI.STORAGE_ROOT_PATH + "\\Data\\" + data.relativePath;
+        string savepath = FPath.STORAGE_ROOT_PATH + "\\Data\\" + data.relativePath;
         Tools.Bytes2File(data.fileData, savepath);
 
         StorageHelper.UpdateThisFileInfo(data.relativePath);
