@@ -77,6 +77,7 @@ namespace HttpServer.Frame.Helper
                     usrInfo.idCoder = m_storageObj.usersInfo[pwd_idx].idCoder;
                     usrInfo.Contact = m_storageObj.usersInfo[pwd_idx].Contact;
                     usrInfo.UnitName = m_storageObj.usersInfo[pwd_idx].UnitName;
+                    usrInfo.login = true;
                     usrInfo.hint = "登录成功";
                 }
                 else if (pwd_idx != -1 && m_storageObj.usersInfo[pwd_idx].login == false)
