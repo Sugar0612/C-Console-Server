@@ -68,7 +68,7 @@ namespace HttpServer.Frame.Helper
             if (account_idx != -1)
             {
                 int pwd_idx = m_storageObj.usersInfo.FindIndex(x => x.userName == info.userName && x.password == info.password);
-                if (pwd_idx != -1)
+                if (pwd_idx != -1 && m_storageObj.usersInfo[pwd_idx].login == true)
                 {
                     usrInfo.Name = m_storageObj.usersInfo[pwd_idx].Name;
                     usrInfo.Gender = m_storageObj.usersInfo[pwd_idx].Gender;
@@ -77,8 +77,11 @@ namespace HttpServer.Frame.Helper
                     usrInfo.idCoder = m_storageObj.usersInfo[pwd_idx].idCoder;
                     usrInfo.Contact = m_storageObj.usersInfo[pwd_idx].Contact;
                     usrInfo.UnitName = m_storageObj.usersInfo[pwd_idx].UnitName;
-                    usrInfo.login = true;
                     usrInfo.hint = "登录成功";
+                }
+                else if (pwd_idx != -1 && m_storageObj.usersInfo[pwd_idx].login == false)
+                {
+                    usrInfo.hint = "账号未激活";
                 }
                 else
                 {
@@ -102,6 +105,7 @@ namespace HttpServer.Frame.Helper
             if (m_storageObj.usersInfo.Find(x => x.userName == inf.userName) == null)
             {
                 inf.hint = "注册成功!";
+                inf.login = false;
                 m_storageObj.usersInfo.Add(inf);
                 m_storageObj.Save();
             }

@@ -50,7 +50,7 @@
         public string idCoder;
         public string Contact;
         public string UnitName;
-        public bool login = false;
+        public bool login = false; // 账号是否激活可登录使用
         public string hint = "";
     }
 
