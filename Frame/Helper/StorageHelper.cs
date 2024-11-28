@@ -70,14 +70,7 @@ namespace HttpServer.Frame.Helper
                 int pwd_idx = m_storageObj.usersInfo.FindIndex(x => x.userName == info.userName && x.password == info.password);
                 if (pwd_idx != -1 && m_storageObj.usersInfo[pwd_idx].login == true)
                 {
-                    usrInfo.Name = m_storageObj.usersInfo[pwd_idx].Name;
-                    usrInfo.Gender = m_storageObj.usersInfo[pwd_idx].Gender;
-                    usrInfo.Age = m_storageObj.usersInfo[pwd_idx].Age;
-                    usrInfo.Identity = m_storageObj.usersInfo[pwd_idx].Identity;
-                    usrInfo.idCoder = m_storageObj.usersInfo[pwd_idx].idCoder;
-                    usrInfo.Contact = m_storageObj.usersInfo[pwd_idx].Contact;
-                    usrInfo.UnitName = m_storageObj.usersInfo[pwd_idx].UnitName;
-                    usrInfo.login = true;
+                    usrInfo = m_storageObj.usersInfo[pwd_idx];
                     usrInfo.hint = "登录成功";
                 }
                 else if (pwd_idx != -1 && m_storageObj.usersInfo[pwd_idx].login == false)
