@@ -9,13 +9,13 @@ namespace HttpServer.Frame.Controller
 
         public void Register()
         {
-            m_httpHelper = new HttpHelper();
+            // m_httpHelper = new HttpHelper();
             m_storageHelper = new StorageHelper();
         }
 
         public void StartUpComponents()
         {
-            m_httpHelper.Laucher();
+            // m_httpHelper.Laucher();
             m_storageHelper.LoadHardDisk2Memory();
         }
 

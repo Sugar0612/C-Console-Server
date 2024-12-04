@@ -322,4 +322,23 @@
         public string QRcode = ""; // 二维码路径
         public string ProjPath = ""; // 软件路径
     }
+
+    /// <summary>
+    /// 人次统计
+    /// </summary>
+    public class NumOfPeopleInfo : BaseInfo
+    {
+        public string moduleName = "";
+        public long count = 0;
+    }
+
+    /// <summary>
+    /// 时长统计
+    /// </summary>
+    public class UsrTimeInfo : BaseInfo
+    {
+        public string usrName = "";
+        public string moduleName = "";
+        public long min = 0;
+    }
 }

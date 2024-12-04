@@ -1,5 +1,5 @@
-﻿using HttpServer.Frame.Tools;
-using static HttpServer.Core.CHttpServer;
+﻿using HttpServer.Frame.Http;
+using HttpServer.Frame.Tools;
 
 namespace HttpServer.RunTime.Event
 {

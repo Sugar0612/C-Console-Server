@@ -4,7 +4,7 @@ using LitJson;
 
 namespace HttpServer.Frame.Storage
 {
-    internal class StorageObject
+    internal class StorageObject : StorageMethod
     {
         public List<ResourcesInfo> rsCheck = new List<ResourcesInfo>();
         public List<UserInfo> usersInfo = new List<UserInfo>();
@@ -16,6 +16,8 @@ namespace HttpServer.Frame.Storage
         public List<ExamineInfo> examineesInfo = new List<ExamineInfo>();
         public List<ScoreInfo> scoresInfo = new List<ScoreInfo>();
         public List<SoftwareInfo> softwareInfo = new List<SoftwareInfo>();
+        public List<NumOfPeopleInfo> numOfPeoInfo = new List<NumOfPeopleInfo>();
+        public List<UsrTimeInfo> usrTimeInfo = new List<UsrTimeInfo>();
 
         public void Init()
         {
@@ -29,6 +31,8 @@ namespace HttpServer.Frame.Storage
             HardDisk2Memory(FPath.STORAGE_EXAMINE, out examineesInfo);
             HardDisk2Memory(FPath.STORAGE_SCORE, out scoresInfo);
             HardDisk2Memory(FPath.STORAGE_SOFTWARE, out softwareInfo);
+            HardDisk2Memory(FPath.STORAGE_MCNT, out numOfPeoInfo);
+            HardDisk2Memory(FPath.STORAGE_USTIME, out usrTimeInfo);
         }
 
         public void Save()
@@ -43,26 +47,8 @@ namespace HttpServer.Frame.Storage
             Memory2HardDisk(FPath.STORAGE_EXAMINE, examineesInfo);
             Memory2HardDisk(FPath.STORAGE_SCORE, scoresInfo);
             Memory2HardDisk(FPath.STORAGE_SOFTWARE, softwareInfo);
-        }
-
-        private void HardDisk2Memory<T>(string filePath, out List<T> targetList)
-        {
-            string jsonString = FileHelper.ReadTextFile(filePath);
-            if (jsonString.Count() == 0)
-            {
-                targetList = new List<T>();
-                return;
-            }
-           
-            targetList = JsonMapper.ToObject<List<T>>(jsonString);
-        }
-
-        private void Memory2HardDisk<T>(string savePath, List<T> saveList)
-        {
-            if (saveList == null) return;
-            string json = JsonMapper.ToJson(saveList);
-            //Console.WriteLine($"{savePath}: {json}");
-            FileHelper.WriteTextFile(savePath, json);
+            Memory2HardDisk(FPath.STORAGE_MCNT, numOfPeoInfo);
+            Memory2HardDisk(FPath.STORAGE_USTIME, usrTimeInfo);
         }
     }
 }

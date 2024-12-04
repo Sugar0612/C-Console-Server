@@ -1,11 +1,9 @@
-using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-using HttpServer.Core;
 using HttpServer.Frame.Helper;
+using HttpServer.Frame.Http;
 using HttpServer.Frame.Storage;
 using HttpServer.RunTime.Event;
 using LitJson;
-using static HttpServer.Core.CHttpServer;
 
 public class ClassEvent : BaseEvent
 {
@@ -31,7 +29,7 @@ public class ClassEvent : BaseEvent
         }
 
         string inf = JsonMapper.ToJson(infs);
-        HttpSendAsync(pkg.Context, inf, EventType.ClassEvent, OperateType.GET);
+        httpMethod.HttpSendAsync(pkg.Context, inf, EventType.ClassEvent, OperateType.GET);
     }
 
     public override async void AddEvent(AsyncExpandPkg pkg)
@@ -40,7 +38,7 @@ public class ClassEvent : BaseEvent
         List<ClassInfo> new_list = await StorageHelper.AddInfo(info, StorageHelper.m_storageObj.classesInfo, x => x.Class == info.Class);
 
         string body = JsonMapper.ToJson(new_list);
-        HttpSendAsync(pkg.Context, body, EventType.ClassEvent, OperateType.ADD);
+        httpMethod.HttpSendAsync(pkg.Context, body, EventType.ClassEvent, OperateType.ADD);
     }
 
     public override async void ReviseInfoEvent(AsyncExpandPkg pkg)
@@ -49,7 +47,7 @@ public class ClassEvent : BaseEvent
         List<ClassInfo> inf = await StorageHelper.ReviseInfo(info, StorageHelper.m_storageObj.classesInfo, x => x.id == info.id);
         
         string s_inf = JsonMapper.ToJson(inf);
-        HttpSendAsync(pkg.Context, s_inf, EventType.ClassEvent, OperateType.REVISE);
+        httpMethod.HttpSendAsync(pkg.Context, s_inf, EventType.ClassEvent, OperateType.REVISE);
     }
 
     public override async void DeleteInfoEvent(AsyncExpandPkg pkg)
@@ -59,7 +57,7 @@ public class ClassEvent : BaseEvent
             await StorageHelper.DeleteInfo(StorageHelper.m_storageObj.classesInfo, (x) => {return x.id == info.id;});
         
         string body = JsonMapper.ToJson(new_list);
-        HttpSendAsync(pkg.Context, body, EventType.ClassEvent, OperateType.DELETE);
+        httpMethod.HttpSendAsync(pkg.Context, body, EventType.ClassEvent, OperateType.DELETE);
     }
         
     public override async void SearchInfoEvent(AsyncExpandPkg pkg)
@@ -68,7 +66,7 @@ public class ClassEvent : BaseEvent
         List<ClassInfo> inf = StorageHelper.SearchInf(StorageHelper.m_storageObj.classesInfo, x => x.Class == info.Class);
 
         string s_inf = JsonMapper.ToJson(inf);
-        HttpSendAsync(pkg.Context, s_inf, EventType.ClassEvent, OperateType.SEARCH);
+        httpMethod.HttpSendAsync(pkg.Context, s_inf, EventType.ClassEvent, OperateType.SEARCH);
         await UniTask.Yield();
     }    
 }

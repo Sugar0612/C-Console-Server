@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using HttpServer.Core;
 using HttpServer.Frame.Helper;
+using HttpServer.Frame.Http;
 using HttpServer.Frame.Storage;
 using HttpServer.RunTime.Event;
 using LitJson;
@@ -35,7 +36,7 @@ public class CheckEvent : BaseEvent
         up.filesInfo = bufInfo;
         // Debug.Log($"filesInfo Count: {up.filesInfo.Count}");
         string body = await JsonHelper.AsyncToJson(up);
-        CHttpServer.HttpSendAsync(expand_pkg.Context, body, EventType.CheckEvent, OperateType.NONE);
+        httpMethod.HttpSendAsync(expand_pkg.Context, body, EventType.CheckEvent, OperateType.NONE);
         await UniTask.Yield();
     }
 }

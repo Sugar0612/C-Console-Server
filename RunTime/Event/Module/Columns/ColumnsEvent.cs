@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using HttpServer.Core;
 using HttpServer.Frame.Helper;
+using HttpServer.Frame.Http;
 using HttpServer.Frame.Storage;
 using HttpServer.RunTime.Event;
 using LitJson;
@@ -14,7 +15,7 @@ public class ColumnsEvent : BaseEvent
         List<ColumnsInfo> infs = await StorageHelper.GetInfo(StorageHelper.m_storageObj.columnsInfo);
         
         string inf = JsonMapper.ToJson(infs);
-        CHttpServer.HttpSendAsync(pkg.Context, inf, EventType.ColumnsEvent, OperateType.GET);
+        httpMethod.HttpSendAsync(pkg.Context, inf, EventType.ColumnsEvent, OperateType.GET);
     }
 
     public override async void AddEvent(AsyncExpandPkg pkg)
@@ -23,7 +24,7 @@ public class ColumnsEvent : BaseEvent
         List<ColumnsInfo> new_list = await StorageHelper.AddInfo(info, StorageHelper.m_storageObj.columnsInfo, x => x.Name == info.Name);
 
         string body = JsonMapper.ToJson(new_list);
-        CHttpServer.HttpSendAsync(pkg.Context, body, EventType.ColumnsEvent, OperateType.ADD);
+        httpMethod.HttpSendAsync(pkg.Context, body, EventType.ColumnsEvent, OperateType.ADD);
     }
 
     public override async void ReviseInfoEvent(AsyncExpandPkg pkg)
@@ -32,7 +33,7 @@ public class ColumnsEvent : BaseEvent
         List<ColumnsInfo> inf = await StorageHelper.ReviseInfo(info, StorageHelper.m_storageObj.columnsInfo, x => x.id == info.id);
         
         string s_inf = JsonMapper.ToJson(inf);
-        CHttpServer.HttpSendAsync(pkg.Context, s_inf, EventType.ColumnsEvent, OperateType.REVISE);
+        httpMethod.HttpSendAsync(pkg.Context, s_inf, EventType.ColumnsEvent, OperateType.REVISE);
     }
 
     public override async void DeleteInfoEvent(AsyncExpandPkg pkg)
@@ -45,7 +46,7 @@ public class ColumnsEvent : BaseEvent
         if (i == -1) new_list = await StorageHelper.DeleteInfo(StorageHelper.m_storageObj.columnsInfo, (x) => {return x.id == info.id;});
         
         string body = JsonMapper.ToJson(new_list);
-        CHttpServer.HttpSendAsync(pkg.Context, body, EventType.ColumnsEvent, OperateType.DELETE);
+        httpMethod.HttpSendAsync(pkg.Context, body, EventType.ColumnsEvent, OperateType.DELETE);
     }
 
     public override async void SearchInfoEvent(AsyncExpandPkg pkg)
@@ -54,7 +55,7 @@ public class ColumnsEvent : BaseEvent
         List<ColumnsInfo> inf = StorageHelper.SearchInf(StorageHelper.m_storageObj.columnsInfo, x => x.Name == info.Name);
 
         string s_inf = JsonMapper.ToJson(inf);
-        CHttpServer.HttpSendAsync(pkg.Context, s_inf, EventType.ColumnsEvent, OperateType.SEARCH);
+        httpMethod.HttpSendAsync(pkg.Context, s_inf, EventType.ColumnsEvent, OperateType.SEARCH);
         await UniTask.Yield();
     }      
 }

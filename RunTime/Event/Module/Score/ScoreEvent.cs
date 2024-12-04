@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using HttpServer.Core;
 using HttpServer.Frame.Helper;
+using HttpServer.Frame.Http;
 using HttpServer.Frame.Storage;
 using HttpServer.RunTime.Event;
 using LitJson;
@@ -14,7 +15,7 @@ public class ScoreEvent : BaseEvent
         List<ScoreInfo> inf = await StorageHelper.GetInfo(StorageHelper.m_storageObj.scoresInfo);
         
         string s_inf = JsonMapper.ToJson(inf);
-        CHttpServer.HttpSendAsync(pkg.Context, s_inf, EventType.ScoreEvent, OperateType.GET);
+        httpMethod.HttpSendAsync(pkg.Context, s_inf, EventType.ScoreEvent, OperateType.GET);
     }
 
     public override async void AddEvent(AsyncExpandPkg pkg)
@@ -28,7 +29,7 @@ public class ScoreEvent : BaseEvent
         StorageHelper.m_storageObj.examineesInfo[examIdx].PNum += 1;
         
         string s_inf = JsonMapper.ToJson(new_list);
-        CHttpServer.HttpSendAsync(pkg.Context, s_inf, EventType.ScoreEvent, OperateType.ADD);
+        httpMethod.HttpSendAsync(pkg.Context, s_inf, EventType.ScoreEvent, OperateType.ADD);
     }
 
     public override async void ReviseInfoEvent(AsyncExpandPkg pkg)
@@ -48,7 +49,7 @@ public class ScoreEvent : BaseEvent
         else StorageHelper.m_storageObj.scoresInfo[index] = info;
         
         string s_inf = JsonMapper.ToJson(StorageHelper.m_storageObj.scoresInfo);
-        CHttpServer.HttpSendAsync(pkg.Context, s_inf, EventType.ScoreEvent, OperateType.REVISE);
+        httpMethod.HttpSendAsync(pkg.Context, s_inf, EventType.ScoreEvent, OperateType.REVISE);
         await UniTask.Yield();
     }
 
@@ -59,7 +60,7 @@ public class ScoreEvent : BaseEvent
                                 && x.courseName == info.courseName && x.registerTime == info.registerTime && x.className == info.className);
 
         string s_inf = JsonMapper.ToJson(infs);
-        CHttpServer.HttpSendAsync(pkg.Context, s_inf, EventType.ScoreEvent, OperateType.DELETE);
+        httpMethod.HttpSendAsync(pkg.Context, s_inf, EventType.ScoreEvent, OperateType.DELETE);
     }
 
     public override async void SearchInfoEvent(AsyncExpandPkg pkg)
@@ -76,7 +77,7 @@ public class ScoreEvent : BaseEvent
         if (isSearch == false) inf.Clear();
         
         string s_inf = JsonMapper.ToJson(inf);
-        CHttpServer.HttpSendAsync(pkg.Context, s_inf, EventType.ScoreEvent, OperateType.SEARCH);
+        httpMethod.HttpSendAsync(pkg.Context, s_inf, EventType.ScoreEvent, OperateType.SEARCH);
         await UniTask.Yield();
     }
 }

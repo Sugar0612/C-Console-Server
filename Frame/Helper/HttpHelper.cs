@@ -1,30 +1,27 @@
 ﻿using HttpServer.Core;
-using HttpServer.Frame.Storage;
-using HttpServer.Frame.Tools;
-using HttpServer.RunTime.Event;
-using LitJson;
+using HttpServer.Frame.Http;
 using System.Net;
-using System.Text;
 
 namespace HttpServer.Frame.Helper
 {
-    internal class HttpHelper
+    public class HttpHelper
     {
-        public void Laucher()
+        public void RequestProcess(string actionName, string methodName, HttpListenerContext context)
         {
-            string url = FileHelper.ReadTextFile(FPath.IP);
-            string[] split = url.Split(":");
-            if (split.Length == 2)
-            {
-                CHttpServer httpServer = new CHttpServer(split[0], split[1]);
-                Thread thread = new Thread(new ThreadStart(httpServer.Launcher));
-                thread.Start();
-            }
-        }
+            string _log = $"RequestProess actionName: {actionName}, methodName: {methodName}";
+            Console.Write(_log);
 
-        public static void LoginRequestProcess(HttpListenerContext context)
-        {
-
+            HttpProcess process = new HttpProcess(context);
+            if (actionName == "/getUserList" && methodName == "POST") { process.GetUserListAsync(); }
+            else if (actionName == "/getSoftwareList" && methodName == "POST") { process.GetSoftwareListAsync(); }
+            else if (actionName == "/Login" && methodName == "POST") { process.Login(); }
+            else if (actionName == "/Register" && methodName == "POST") { process.Register(); }
+            else if (actionName == "/UserExit" && methodName == "POST") { process.UserExit(); }
+            else if (actionName == "/NumOfPeople" && methodName == "POST") { process.AddNumOfPeople(); }
+            else if (actionName == "/GetNumOfPeopleList" && methodName == "GET") { process.GetNumOfPeopleListAsync(); }
+            else if (actionName == "/UsrTime" && methodName == "POST") { process.AddUsrTime(); }
+            else if (actionName == "/GetUsrTimeList" && methodName == "GET") { process.GetUsrTimeListAsync(); }
+            else { process.Other(methodName); }
         }
     }
 }

@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using HttpServer.Core;
 using HttpServer.Frame.Helper;
+using HttpServer.Frame.Http;
 using HttpServer.Frame.Storage;
 using HttpServer.RunTime.Event;
 using LitJson;
@@ -16,7 +17,7 @@ public class RegisterEvent : BaseEvent
             inf = await StorageHelper.Register(inf);
             
             string s_inf = JsonMapper.ToJson(inf);
-            CHttpServer.HttpSendAsync(asynExPkg.Context, s_inf, EventType.RegisterEvent, OperateType.NONE);
+            httpMethod.HttpSendAsync(asynExPkg.Context, s_inf, EventType.RegisterEvent, OperateType.NONE);
         });
     }
 }

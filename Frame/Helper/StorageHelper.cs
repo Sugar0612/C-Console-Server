@@ -221,5 +221,13 @@ namespace HttpServer.Frame.Helper
             list = storInf.FindAll(match);
             return list;
         }
+
+        /// <summary>
+        /// 保存
+        /// </summary>
+        public static void Save()
+        {
+            m_storageObj.Save();
+        }
     }
 }

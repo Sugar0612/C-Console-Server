@@ -1,18 +1,18 @@
 using Cysharp.Threading.Tasks;
-using HttpServer.Core;
 using HttpServer.Frame.Helper;
+using HttpServer.Frame.Http;
 using HttpServer.RunTime.Event;
 using LitJson;
-using static HttpServer.Core.CHttpServer;
+using HttpMethod = HttpServer.Frame.Http.HttpMethod;
 
 public class GetEvent : BaseEvent
 {
     public override async void OnEvent(AsyncExpandPkg pkg)
-    {        
+    {
         JsonData jd = AllInfoToJsData();
 
         string inf = JsonMapper.ToJson(jd);
-        CHttpServer.HttpSendAsync(pkg.Context, inf, EventType.GetEvent, OperateType.NONE);
+        httpMethod.HttpSendAsync(pkg.Context, inf, EventType.GetEvent, OperateType.NONE);
 
         await UniTask.Yield();
     }

@@ -1,10 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static HttpServer.Core.CHttpServer;
+using HttpServer.Frame.Http;
+using HttpMethod = HttpServer.Frame.Http.HttpMethod;
 
 namespace HttpServer.RunTime.Event
 {
@@ -36,6 +32,7 @@ namespace HttpServer.RunTime.Event
 
     public abstract class BaseEvent
     {
+        public HttpMethod httpMethod = new HttpMethod();
         public virtual async void OnEvent(AsyncExpandPkg pkg) { await UniTask.Yield(); }
         public virtual async void GetInfoEvent(AsyncExpandPkg pkg) { await UniTask.Yield(); }
         public virtual async void AddEvent(AsyncExpandPkg pkg) { await UniTask.Yield(); }

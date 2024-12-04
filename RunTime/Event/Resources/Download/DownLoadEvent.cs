@@ -1,6 +1,7 @@
 
 using HttpServer.Core;
 using HttpServer.Frame.Helper;
+using HttpServer.Frame.Http;
 using HttpServer.Frame.Tools;
 using HttpServer.RunTime.Event;
 using LitJson;
@@ -27,7 +28,7 @@ public class DownLoadEvent : BaseEvent
             };
 
             string str_data = await JsonHelper.AsyncToJson(data);
-            CHttpServer.HttpSendAsync(expand_pkg.Context, str_data, EventType.DownLoadEvent, OperateType.NONE);
+            httpMethod.HttpSendAsync(expand_pkg.Context, str_data, EventType.DownLoadEvent, OperateType.NONE);
         }
     }
 }

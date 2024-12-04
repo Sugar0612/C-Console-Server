@@ -27,6 +27,7 @@ namespace HttpServer.Core
 
         static void StartUpComponents()
         {
+            CHttpServer server = new CHttpServer();
             m_helperConsole.StartUpComponents();
         }
 

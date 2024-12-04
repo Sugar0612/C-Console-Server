@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using HttpServer.Core;
 using HttpServer.Frame.Helper;
+using HttpServer.Frame.Http;
 using HttpServer.Frame.Storage;
 using HttpServer.Frame.Tools;
 using HttpServer.RunTime.Event;
@@ -14,7 +15,7 @@ public class ResEvent : BaseEvent
         List<ResourcesInfo> infs = await StorageHelper.GetInfo(StorageHelper.m_storageObj.rsCheck);
         
         string inf = JsonMapper.ToJson(infs);
-        CHttpServer.HttpSendAsync(pkg.Context, inf, EventType.ResEvent, OperateType.GET);
+        httpMethod.HttpSendAsync(pkg.Context, inf, EventType.ResEvent, OperateType.GET);
     }
 
     public override async void AddEvent(AsyncExpandPkg pkg)
@@ -42,7 +43,7 @@ public class ResEvent : BaseEvent
         }
         
         string body = JsonMapper.ToJson(new_list);
-        CHttpServer.HttpSendAsync(pkg.Context, body, EventType.ResEvent, OperateType.DELETE);
+        httpMethod.HttpSendAsync(pkg.Context, body, EventType.ResEvent, OperateType.DELETE);
     }
 
     public override async void SearchInfoEvent(AsyncExpandPkg pkg)

@@ -1,10 +1,8 @@
-using Cysharp.Threading.Tasks;
 using HttpServer.Frame.Helper;
+using HttpServer.Frame.Http;
 using HttpServer.Frame.Tools;
 using HttpServer.RunTime.Event;
 using LitJson;
-using static HttpServer.Core.CHttpServer;
-using static System.Net.Mime.MediaTypeNames;
 
 public class UploadEvent : BaseEvent
 {

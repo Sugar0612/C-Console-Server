@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using HttpServer.Core;
 using HttpServer.Frame.Helper;
+using HttpServer.Frame.Http;
 using HttpServer.RunTime.Event;
 using LitJson;
 using static HttpServer.Core.CHttpServer;
@@ -32,7 +33,7 @@ public class GetProjInfo : BaseEvent
         }
 
         string inf = JsonMapper.ToJson(projs);
-        CHttpServer.HttpSendAsync(asynExPkg.Context, inf, EventType.GetProjInfo, OperateType.NONE);
+        httpMethod.HttpSendAsync(asynExPkg.Context, inf, EventType.GetProjInfo, OperateType.NONE);
     }
 }
 
