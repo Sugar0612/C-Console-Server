@@ -328,8 +328,8 @@
     /// </summary>
     public class NumOfPeopleInfo : BaseInfo
     {
-        public string moduleName = "";
-        public long count = 0;
+        public string moduleName = ""; // 模块名称
+        public long count = 0; // 该模块使用人次
     }
 
     /// <summary>
@@ -337,8 +337,8 @@
     /// </summary>
     public class UsrTimeInfo : BaseInfo
     {
-        public string usrName = "";
-        public string moduleName = "";
-        public long min = 0;
+        public string usrName = ""; // 用户名
+        public string moduleName = ""; // 模块名称
+        public long min = 0; // 使用时间(分钟)
     }
 }

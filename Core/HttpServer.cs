@@ -40,7 +40,6 @@ namespace HttpServer.Core
             Console.WriteLine(log);
 
             // 使用异步监听Web请求，当客户端的网络请求到来时会自动执行委托
-
             listener.BeginGetContext(Respones, null);
 
             while (true) ;
@@ -68,7 +67,7 @@ namespace HttpServer.Core
             Console.WriteLine(log);
 
             HttpMethod method = new HttpMethod();
-            method.NativePostRequest(context);
+            method.NativeRequest(context);
         }
 
         /// <summary>

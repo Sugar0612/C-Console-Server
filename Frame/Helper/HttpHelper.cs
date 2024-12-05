@@ -8,7 +8,7 @@ namespace HttpServer.Frame.Helper
     {
         public void RequestProcess(string actionName, string methodName, HttpListenerContext context)
         {
-            string _log = $"RequestProess actionName: {actionName}, methodName: {methodName}";
+            string _log = $"RequestProess actionName: {actionName}, methodName: {methodName}\n";
             Console.Write(_log);
 
             HttpProcess process = new HttpProcess(context);
@@ -21,6 +21,7 @@ namespace HttpServer.Frame.Helper
             else if (actionName == "/GetNumOfPeopleList" && methodName == "GET") { process.GetNumOfPeopleListAsync(); }
             else if (actionName == "/UsrTime" && methodName == "POST") { process.AddUsrTime(); }
             else if (actionName == "/GetUsrTimeList" && methodName == "GET") { process.GetUsrTimeListAsync(); }
+            else if (actionName == "/GetModulesTimeList" && methodName == "GET") { process.GetModulesTimeList(); }
             else { process.Other(methodName); }
         }
     }

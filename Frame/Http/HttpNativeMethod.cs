@@ -21,7 +21,7 @@ namespace HttpServer.Frame.Http
             return content;
         }
 
-        public void NativePostRequest(HttpListenerContext context)
+        public void NativeRequest(HttpListenerContext context)
         {
             HttpListenerRequest request = context.Request;
             string? actionName = request.Url?.AbsolutePath;

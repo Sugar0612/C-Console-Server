@@ -3,6 +3,7 @@ using HttpServer.Frame.Storage;
 using HttpServer.Frame.Tools;
 using LitJson;
 using System.Net;
+using System.Text.Json.Nodes;
 using System.Text.RegularExpressions;
 
 namespace HttpServer.Frame.Http
@@ -145,6 +146,18 @@ namespace HttpServer.Frame.Http
             List<UsrTimeInfo> utList = await StorageHelper.GetInfo(StorageHelper.m_storageObj.usrTimeInfo);
             string retContext = JsonMapper.ToJson(utList);
             m_Method.NativeSend(m_HttpContext.Response, retContext);
+        }
+
+        /// <summary>
+        /// 获取每个模块的总时长
+        /// </summary>
+        public void GetModulesTimeList()
+        {
+            Dictionary<string, long> modulesDic = new Dictionary<string, long>();
+            foreach (var software in StorageHelper.m_storageObj.softwareInfo) { modulesDic.Add(software.Name, 0); }
+            foreach (var inf in StorageHelper.m_storageObj.usrTimeInfo) { if (modulesDic.ContainsKey(inf.moduleName)) { modulesDic[inf.moduleName] += inf.min; } }
+            string jsStr = JsonMapper.ToJson(modulesDic);
+            m_Method.NativeSend(m_HttpContext.Response, jsStr);
         }
 
         /// <summary>
