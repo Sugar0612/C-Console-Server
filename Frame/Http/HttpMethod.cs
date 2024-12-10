@@ -8,6 +8,8 @@ namespace HttpServer.Frame.Http
 {
     public class HttpMethod : HttpNativeMethod
     {
+        public static Queue<AsyncExpandPkg> messQueue = new Queue<AsyncExpandPkg>();
+
         public HttpMethod() : base() { }
 
         public void OptionsRequestProcess(HttpListenerContext context)
@@ -166,6 +168,16 @@ namespace HttpServer.Frame.Http
                 check(pkg);
             }
             catch (Exception e) { }
+        }
+
+        /// <summary>
+        /// 为消息队列 Clone pkg 并且存放
+        /// </summary>
+        /// <param name="pkg"></param>
+        public static void MessQueueAdd(AsyncExpandPkg pkg)
+        {
+            AsyncExpandPkg exp_pkg = new AsyncExpandPkg(pkg);
+            messQueue.Enqueue(exp_pkg);
         }
     }
 

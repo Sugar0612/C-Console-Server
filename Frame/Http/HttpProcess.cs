@@ -160,6 +160,18 @@ namespace HttpServer.Frame.Http
             m_Method.NativeSend(m_HttpContext.Response, jsStr);
         }
 
+        public void DeleteUsrTime()
+        {
+            string content = m_Method.GetRequestContent(m_HttpContext);
+            UsrTimeInfo info = JsonMapper.ToObject<UsrTimeInfo>(content);
+            
+            int i = StorageHelper.m_storageObj.usrTimeInfo.FindIndex(x => x.usrName == info.usrName && x.moduleName == info.moduleName);
+            if (i != -1) StorageHelper.m_storageObj.usrTimeInfo.RemoveAt(i);
+
+            StorageMethod.Memory2HardDisk(FPath.STORAGE_USTIME, StorageHelper.m_storageObj.usrTimeInfo);
+            GetUsrTimeListAsync();
+        }
+
         /// <summary>
         /// 其他 固定的规则请求处理
         /// </summary>

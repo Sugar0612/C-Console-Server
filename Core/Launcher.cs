@@ -1,6 +1,7 @@
 ﻿using HttpServer.Frame.Controller;
 using HttpServer.RunTime.Event;
 using System.Runtime.InteropServices;
+using HttpMethod = HttpServer.Frame.Http.HttpMethod;
 
 namespace HttpServer.Core
 {
@@ -35,9 +36,9 @@ namespace HttpServer.Core
         {
             while (!m_isClose)
             {
-                if (CHttpServer.MessQueue.Count > 0)
+                if (HttpMethod.messQueue.Count > 0)
                 {
-                    var pkg = CHttpServer.MessQueue.Dequeue();
+                    var pkg = HttpMethod.messQueue.Dequeue();
                     m_dispatcher.Dispatcher(pkg);
                 }
             }

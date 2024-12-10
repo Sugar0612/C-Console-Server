@@ -14,7 +14,6 @@ namespace HttpServer.Core
     {
         private HttpListener listener = new HttpListener();
         private string m_Ip = "";
-        public static Queue<AsyncExpandPkg> MessQueue = new Queue<AsyncExpandPkg>();
 
         public CHttpServer()
         {
@@ -63,21 +62,11 @@ namespace HttpServer.Core
             var request = context.Request;
             var response = context.Response;
 
-            string log = $"{DateTime.Now} new Request , Method is : {request.HttpMethod}";
+            string log = $"{DateTime.Now} new Request, Method is : {request.HttpMethod}";
             Console.WriteLine(log);
 
             HttpMethod method = new HttpMethod();
             method.NativeRequest(context);
-        }
-
-        /// <summary>
-        /// 为消息队列 Clone pkg 并且存放
-        /// </summary>
-        /// <param name="pkg"></param>
-        public static void MessQueueAdd(AsyncExpandPkg pkg)
-        {
-            AsyncExpandPkg exp_pkg = new AsyncExpandPkg(pkg);
-            MessQueue.Enqueue(exp_pkg);
         }
     }
 }

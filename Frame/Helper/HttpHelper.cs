@@ -22,6 +22,7 @@ namespace HttpServer.Frame.Helper
             else if (actionName == "/UsrTime" && methodName == "POST") { process.AddUsrTime(); }
             else if (actionName == "/GetUsrTimeList" && methodName == "GET") { process.GetUsrTimeListAsync(); }
             else if (actionName == "/GetModulesTimeList" && methodName == "GET") { process.GetModulesTimeList(); }
+            else if (actionName == "/DeleteUsrTime" && methodName == "POST") { process.DeleteUsrTime(); }
             else { process.Other(methodName); }
         }
     }
