@@ -7,9 +7,9 @@
     [Serializable]
     public class ResourcesInfo : BaseInfo
     {
-        public string relaPath;
-        public string version_code;
-        public bool need_updata;
+        public string relaPath; // 相对路径 StreamingAsset/...
+        public string version_code; // 版本号
+        public bool need_updata; // 是否需要同步更新
 
         public ResourcesInfo() { }
 
@@ -29,10 +29,10 @@
     [Serializable]
     public class FacultyInfo : BaseInfo
     {
-        public string id;
-        public string Name;
-        public string RegisterTime;
-        public string TeacherName;
+        public string id; // ID
+        public string Name; // 名称
+        public string RegisterTime; // 注册时间
+        public string TeacherName; // 管理学院人名
     }
 
     /// <summary>
@@ -41,17 +41,17 @@
     [Serializable]
     public class UserInfo : BaseInfo
     {
-        public string userName;
-        public string password;
-        public string Name;
-        public string Gender;
-        public string Age;
-        public string Identity;
-        public string idCoder;
-        public string Contact;
-        public string UnitName;
+        public string userName; // 用户名
+        public string password; // 密码
+        public string Name; // 真实姓名
+        public string Gender; // 性别
+        public string Age;  // 年龄
+        public string Identity; // 身份【学生、教师、管理员】 
+        public string idCoder;  // 身份证
+        public string Contact;  // 联系方式
+        public string UnitName; // 所属单位【班级、专业、学院】
         public bool login = false; // 账号是否激活可登录使用
-        public string hint = "";
+        public string hint = ""; // 提示信息【登录成功、登录失败等等】
     }
 
     /// <summary>
@@ -60,11 +60,11 @@
     [Serializable]
     public class MajorInfo : BaseInfo
     {
-        public string id;
-        public string MajorName;
-        public string RegisterTime;
-        public string FacultyName;
-        public string TeacherName;
+        public string id;  // ID
+        public string MajorName; // 专业名称
+        public string RegisterTime; // 注册时间
+        public string FacultyName; // 所属学院
+        public string TeacherName; // 管理老师姓名
     }
 
     /// <summary>
@@ -73,13 +73,13 @@
     [Serializable]
     public class ClassInfo : BaseInfo
     {
-        public string id;
-        public string Class;
-        public string RegisterTime;
-        public string Faculty;
-        public string Major;
-        public string Teacher;
-        public int Number;
+        public string id; // ID
+        public string Class; // 班级名称
+        public string RegisterTime; // 注册时间
+        public string Faculty; // 所属学院
+        public string Major;  // 所属专业
+        public string Teacher; // 管理的老师
+        public int Number; // 人数
     }
 
     /// <summary>
@@ -88,9 +88,9 @@
     [Serializable]
     public class ColumnsInfo : BaseInfo
     {
-        public string id;
-        public string Name;
-        public string RegisterTime;
+        public string id; // ID
+        public string Name; // 栏目名称
+        public string RegisterTime; // 注册时间
     }
 
     /// <summary>
@@ -99,11 +99,11 @@
     [Serializable]
     public class CourseInfo : BaseInfo
     {
-        public string id;
-        public string CourseName;
-        public string Columns;
-        public string Working;
-        public string RegisterTime;
+        public string id; // ID
+        public string CourseName; // 课程名称
+        public string Columns; // 所属栏目
+        public string Working; // 课程介绍（目前没有使用）
+        public string RegisterTime; // 注册时间
     }
 
     /// <summary>
@@ -112,21 +112,21 @@
     [Serializable]
     public class ExamineInfo : BaseInfo
     {
-        public string id;
-        public string ColumnsName;
-        public string CourseName;
-        public string RegisterTime;
-        public string TrainingScore;
-        public string TheoryTime = "5"; // 分钟
-        public string TrainingTime = "5"; // 分钟   
-        public int PNum;
-        public int SingleNum;
-        public int MulitNum;
-        public int TOFNum;
-        public bool Status = false;
-        public List<SingleChoice> SingleChoices = new List<SingleChoice>();
-        public List<MulitChoice> MulitChoices = new List<MulitChoice>();
-        public List<TOFChoice> TOFChoices = new List<TOFChoice>();
+        public string id; // ID
+        public string ColumnsName; // 所属栏目
+        public string CourseName; // 所属课程
+        public string RegisterTime; // 注册时间
+        public string TrainingScore; // 设置的实训考核总分数
+        public string TheoryTime = "5"; // 理论考核时间（分钟单位）
+        public string TrainingTime = "5"; // 实训考核时间（分钟单位）
+        public int PNum; // 考核人数
+        public int SingleNum; // 单选题数目
+        public int MulitNum; // 多选题数目
+        public int TOFNum; // 判断题数目
+        public bool Status = false; // 是否激活显示在客户端
+        public List<SingleChoice> SingleChoices = new List<SingleChoice>(); // 单选题目列表
+        public List<MulitChoice> MulitChoices = new List<MulitChoice>(); // 多选题目列表
+        public List<TOFChoice> TOFChoices = new List<TOFChoice>(); // 判断题目列表
 
         public ExamineInfo() { }
         public ExamineInfo Clone()
@@ -157,13 +157,13 @@
     [Serializable]
     public class SingleChoice
     {
-        public string Topic;
-        public ItemChoice toA = new ItemChoice();
-        public ItemChoice toB = new ItemChoice();
-        public ItemChoice toC = new ItemChoice();
-        public ItemChoice toD = new ItemChoice();
-        public string Answer;
-        public string Score = "";
+        public string Topic; // 题目内容
+        public ItemChoice toA = new ItemChoice();  // A
+        public ItemChoice toB = new ItemChoice(); //B
+        public ItemChoice toC = new ItemChoice(); //C
+        public ItemChoice toD = new ItemChoice(); //D
+        public string Answer; // 答案
+        public string Score = ""; // 分数
 
         public SingleChoice Clone()
         {
@@ -185,10 +185,11 @@
     [Serializable]
     public class MulitChoice
     {
-        public string Topic;
-        public List<MulitChoiceItem> Options = new List<MulitChoiceItem>(); // {{"A", "xxxxx", true}, {"B", "xxxxxxx", false}}
-        public string Answer;
-        public string Score = "";
+        public string Topic; // 题目
+        // 选项，因为选项不唯一可能 4个可能6个，所以用List存储
+        public List<MulitChoiceItem> Options = new List<MulitChoiceItem>(); // {{"A", "xxxxx", true}, {"B", "xxxxxxx", false}}，
+        public string Answer;// 答案
+        public string Score = "";// 分数
 
         public MulitChoice Clone()
         {
@@ -207,11 +208,11 @@
     [Serializable]
     public class TOFChoice
     {
-        public string Topic;
-        public ItemChoice toA = new ItemChoice();
-        public ItemChoice toB = new ItemChoice();
-        public string Answer;
-        public string Score = "";
+        public string Topic; //题目
+        public ItemChoice toA = new ItemChoice(); // A
+        public ItemChoice toB = new ItemChoice(); // B
+        public string Answer; //答案
+        public string Score = "";//分数
 
         public TOFChoice Clone()
         {
@@ -281,16 +282,16 @@
     [Serializable]
     public class ScoreInfo : BaseInfo
     {
-        public string className;
-        public string columnsName;
-        public string courseName;
+        public string className; // 所属班级
+        public string columnsName;  // 所属栏目
+        public string courseName;   // 所属课程
         public string registerTime; // 该次考试的注册时间
-        public string userName;
-        public string Name;
-        public string theoryScore;
-        public string trainingScore;
-        public bool theoryFinished; //本次理论考试是否完成
-        public bool trainingFinished; //本次实训考试是否完成
+        public string userName; // 考试用户名
+        public string Name; // 考试人真实姓名
+        public string theoryScore;  // 理论分数
+        public string trainingScore; // 实训分数
+        public bool theoryFinished; //本次理论考试是否完成    
+        public bool trainingFinished; //本次实训考试是否完成  
 
         public ScoreInfo Clone()
         {
